@@ -40,6 +40,12 @@ create table Autor_Libro(
 	FOREIGN KEY (Cod_Autor) REFERENCES Autor(Codigo)
 )
 
+create table Autores_Espana(
+	Codigo varchar(4) primary key not null,
+	Nombres varchar(50) not null,
+	Apellidos varchar(50) not null
+)
+
 INSERT INTO Editorial VALUES
 ('ED01','Thomson internacional', 'España'),
 ('ED02','Omega', 'México'),
@@ -95,8 +101,19 @@ INSERT INTO Autor_Libro VALUES
 SELECT A.Nombres, A.Apellidos,A.Nacionalidad,L.Titulo FROM Autor_Libro AL 
 INNER JOIN Libro L ON AL.Cod_libro = L.Codigo 
 INNER JOIN Autor A ON A.Codigo = AL.Cod_Autor ORDER BY (A.Nombres) DESC
-
---b REVISAR PORQUE AL PARECER APARECEN DUPLICADOS LOS DATOS--
+--b--
 SELECT A.Nombres, A.Apellidos FROM Editorial E INNER JOIN Libro L ON E.Codigo = L.Cod_editorial 
 INNER JOIN Autor_Libro AL ON L.Codigo = AL.Cod_libro 
 INNER JOIN Autor A ON A.Codigo = AL.Cod_Autor WHERE E.Nombres = 'Omega'
+--c--
+SELECT l.Codigo, l.Titulo, COUNT(*) as Cantidad FROM Ejemplar e INNER JOIN Libro l on l.Codigo=e.Cod_libro GROUP BY l.Codigo,l.Titulo
+--d--
+SELECT L.Titulo,E.Estado FROM Ejemplar E INNER JOIN Libro L ON E.Cod_libro = L.Codigo WHERE E.Estado = 'Prestado';
+--e--
+SELECT * FROM Libro l WHERE l.año_edicion BETWEEN 2000 AND 2007
+--f--
+SELECT  e.Ubicacion, COUNT(*) as prestados FROM Ejemplar e INNER JOIN Libro l on l.Codigo=e.Cod_libro GROUP BY e.Ubicacion
+
+--PARTE III--
+INSERT INTO Autores_Espana SELECT a.Codigo,a.Nombres,a.Apellidos FROM Autor a WHERE a.Nacionalidad ='ESPAÑOLA'
+
