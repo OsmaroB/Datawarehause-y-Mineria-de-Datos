@@ -1,7 +1,7 @@
 create database Control_de_libros_OBK
-
+go
 use Control_de_libros_OBK
-
+go
 
 --PARTE I--
 create table Autor(
