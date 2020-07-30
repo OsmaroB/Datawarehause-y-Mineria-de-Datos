@@ -117,3 +117,7 @@ SELECT  e.Ubicacion, COUNT(*) as prestados FROM Ejemplar e INNER JOIN Libro l on
 --PARTE III--
 INSERT INTO Autores_Espana SELECT a.Codigo,a.Nombres,a.Apellidos FROM Autor a WHERE a.Nacionalidad ='ESPAÑOLA'
 
+--==============VISTA COPIA LIBRO=================--
+CREATE VIEW copia_libro
+AS SELECT C.isbn,C.copy_no,C.on_loan,T.title,I.translation,I.cover FROM title T INNER JOIN item I ON T.title_no = I.title_no INNER JOIN copy C ON T.title_no = C.title_no
+WHERE C.isbn = 1 OR C.isbn = 500 OR C.isbn =1000 ORDER BY C.isbn
