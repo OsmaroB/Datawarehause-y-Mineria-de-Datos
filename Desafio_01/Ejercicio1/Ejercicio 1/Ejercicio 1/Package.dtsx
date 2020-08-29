@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{0742541A-95C1-445E-B5D0-E2BCB877389A}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{FC0E5FC8-63C2-4E2C-A30A-B7CBD9EA08A7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,38 +27,38 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZzKlew+3K0mLJ2EWpr03OAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD87kzGJimbYde3aV0SgVSrq+Xd4dYgzv+OcnMl75Ea8gAAAAAOgAAAAAIAACAAAACOl/LM6f0aw2QxETmoAl0houwrYRoCAzXgRsOqNeVgMRAAAABrhIkOnseWt+6eYJ8fUKaAQAAAAHHvO6VbM0dIH9v8crNt9hm/rpCYOaMqSH71d4hKYyolpXUOTzDOGtZBm33vfEJtSQZXx0XhAnhZ+8VsEYteINY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZzKlew+3K0mLJ2EWpr03OAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADw+21FYf0WaUUD0/717ORBfXOg/5knUYwkuOdeTgVXwQAAAAAOgAAAAAIAACAAAADMYD50kvo1bFY07pMAk+IyAsjSZxvQgING+TkY3/hXXhAAAAB9plbArcyMjBpYGXYY7RJmQAAAAPV4KT+Z513Jkq5l1/RszYfmgB2f+hG0SzQJiXOxPCXxdGpphWaarcMucTGG2yURftaCjhlKHJc4dMWZOGeku2g</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{D2F6E9EB-0134-40C9-B4F4-8D69E6323E13}"
+      DTS:DTSID="{C040A797-19E0-4641-AD8E-8B04B745A70D}"
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Diego\SpaCentro_m20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Ejercicio1\Diego\SpaCentro_m20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{03AC847B-1523-4246-8170-250CC997662D}"
+      DTS:DTSID="{85C3D612-3F78-4D75-A537-0486A634BECB}"
       DTS:ObjectName="Excel Connection Manager 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Diego\SpaEscalon_i20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Ejercicio1\Diego\SpaEscalon_i20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{ECC78BD4-17B0-4939-AD7F-76012656C709}"
+      DTS:DTSID="{41B185D4-21B2-467A-9682-173996E84B62}"
       DTS:ObjectName="Excel Connection Manager 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Diego\SpaSantaTecla_m20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Ejercicio1\Diego\SpaSantaTecla_m20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1945,6 +1945,10 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\SantaTecla"
+          TopLeft="481,33" />
+        <NodeLayout
           Size="110,42"
           Id="Package\Data Flow Task\Centro"
           TopLeft="116,34" />
@@ -1953,39 +1957,35 @@
           Id="Package\Data Flow Task\Escalon"
           TopLeft="295,29" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\SantaTecla"
-          TopLeft="481,33" />
-        <NodeLayout
           Size="121,42"
           Id="Package\Data Flow Task\Union All"
-          TopLeft="305,133" />
+          TopLeft="304,126" />
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="290,326" />
+          TopLeft="285,268" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="290,442" />
+          TopLeft="281,339" />
         <NodeLayout
           Size="127,42"
           Id="Package\Data Flow Task\Aggregate"
-          TopLeft="305,219" />
+          TopLeft="299,191" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="367,175">
+          TopLeft="363.5,168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44"
+              EndConnector="0,23"
               Start="0,0"
-              End="0,36.5">
+              End="0,15.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
+                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2000,26 +2000,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-152.25,58"
+              EndConnector="-153.25,51"
               Start="0,0"
-              End="-152.25,50.5">
+              End="-153.25,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.832884097035" />
+                    End="0,29.266846361186" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.832884097035"
-                    Point2="0,37.832884097035"
-                    Point3="-4,37.832884097035" />
+                    Point1="0,29.266846361186"
+                    Point2="0,33.266846361186"
+                    Point3="-4,33.266846361186" />
                   <mssgle:LineSegment
-                    End="-148.25,37.832884097035" />
+                    End="-149.25,33.266846361186" />
                   <mssgle:CubicBezierSegment
-                    Point1="-148.25,37.832884097035"
-                    Point2="-152.25,37.832884097035"
-                    Point3="-152.25,41.832884097035" />
+                    Point1="-149.25,33.266846361186"
+                    Point2="-153.25,33.266846361186"
+                    Point3="-153.25,37.266846361186" />
                   <mssgle:LineSegment
-                    End="-152.25,50.5" />
+                    End="-153.25,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2034,26 +2034,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13.5,62"
+              EndConnector="12.5,55"
               Start="0,0"
-              End="13.5,54.5">
+              End="12.5,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27" />
+                    End="0,23.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
                   <mssgle:LineSegment
-                    End="9.5,31" />
+                    End="8.5,27.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="9.5,31"
-                    Point2="13.5,31"
-                    Point3="13.5,35" />
+                    Point1="8.5,27.5"
+                    Point2="12.5,27.5"
+                    Point3="12.5,31.5" />
                   <mssgle:LineSegment
-                    End="13.5,54.5" />
+                    End="12.5,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2068,26 +2068,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="166.25,57"
+              EndConnector="165.25,50"
               Start="0,0"
-              End="166.25,49.5">
+              End="165.25,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.1805929919137" />
+                    End="0,28.6145552560647" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.1805929919137"
-                    Point2="0,37.1805929919137"
-                    Point3="4,37.1805929919137" />
+                    Point1="0,28.6145552560647"
+                    Point2="0,32.6145552560647"
+                    Point3="4,32.6145552560647" />
                   <mssgle:LineSegment
-                    End="162.25,37.1805929919137" />
+                    End="161.25,32.6145552560647" />
                   <mssgle:CubicBezierSegment
-                    Point1="162.25,37.1805929919137"
-                    Point2="166.25,37.1805929919137"
-                    Point3="166.25,41.1805929919137" />
+                    Point1="161.25,32.6145552560647"
+                    Point2="165.25,32.6145552560647"
+                    Point3="165.25,36.6145552560647" />
                   <mssgle:LineSegment
-                    End="166.25,49.5" />
+                    End="165.25,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2098,18 +2098,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="371.75,368">
+          TopLeft="364.75,310">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,74"
+              EndConnector="0,29"
               Start="0,0"
-              End="0,66.5">
+              End="0,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,66.5" />
+                    End="0,21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2120,18 +2120,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
-          TopLeft="368.25,261">
+          TopLeft="362.75,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65"
+              EndConnector="0,35"
               Start="0,0"
-              End="0,57.5">
+              End="0,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,57.5" />
+                    End="0,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2143,6 +2143,19 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SantaTecla">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Centro">
     <Properties>
@@ -2158,19 +2171,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Escalon">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\SantaTecla">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -1,0 +1,2863 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/28/2020 9:55:09 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-4GU1BBG"
+  DTS:CreatorName="DESKTOP-4GU1BBG\arami"
+  DTS:DTSID="{4E36E507-7367-4FC7-927D-D6DE9F46635F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{A5B3D1FF-7E8A-45C6-BEA3-C4DA8CCD551B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4GU1BBG.floristeria_fiorella.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5F0643B2-14C9-4AFE-9C2B-D3A1F0055A49}"
+      DTS:ObjectName="DESKTOP-4GU1BBG.floristeria_fiorella.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-4GU1BBG;User ID=sa;Initial Catalog=floristeria_fiorella;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZzKlew+3K0mLJ2EWpr03OAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD9HDzV5GdroYMdfsNiDg3ZHFSY3KzQz7e/baxAo7L+bwAAAAAOgAAAAAIAACAAAABSYL/peYRVP9oXGzL9IWlriKzp2wBrxJ4rq1V2yYj2khAAAABOeRoqL0W3vLaXQurvdm9kQAAAAMLw9pyioYXXiz9aLLsa3YqOxwps/SpJX9D6/hUoqb7lkgikfjqODh613gH9nz3jtV/ePRPYQDm8ueE33j9wPyk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C1C3803E-284B-4B87-96B7-B05E6AE31936}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Ejercicio2\Fiorella\SanMiguel_j20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7B2C6B6D-5FEE-4B7B-B93D-4BF9A7DC5E3D}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Ejercicio2\Fiorella\SanSalvador_i20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E307D1DE-29A6-4F84-9326-A352E4025BBD}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\arami\Desktop\Datawarehouse-y-Mineria-de-Datos\Desafio_01\Ejercicio2\Fiorella\SantaAna_c20191007.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{97815723-8A72-425C-921B-6FDC13D4C80D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Departamento"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Departamento]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="75"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of id]"
+                      name="Copy of id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Departamento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Departamento]"
+                      name="Copy of Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Departamento]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Departamento SA"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Departamento SA"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Departamento SA.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Departamento SA.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Output].Columns[Departamento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Output].Columns[Departamento]"
+                      name="Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Santa Ana"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Santa Ana"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Departamento SA.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Departamento SM"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Departamento SM"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Departamento SM.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Departamento SM.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Output].Columns[Departamento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Output].Columns[Departamento]"
+                      name="Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"San Miguel"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"San Miguel"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Departamento SM.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Departamento SS"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Departamento SS"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Departamento SS.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Departamento SS.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Output].Columns[Departamento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Output].Columns[Departamento]"
+                      name="Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"San Salvador"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"San Salvador"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Departamento SS.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[productos]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-4GU1BBG.floristeria_fiorella.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-4GU1BBG.floristeria_fiorella.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rosas]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Rosas]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[claveles]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Claveles]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[macetas]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Macetas]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tierra]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tierra]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[girasoles]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Girasoles]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[globos]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Globos]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tarjetas]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tarjetas]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Orquideas]"
+                      cachedDataType="r8"
+                      cachedName="Orquideas"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[orquideas]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Orquideas]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Carmesi]"
+                      cachedDataType="r8"
+                      cachedName="Carmesi"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[carmesi]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Carmesi]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lirios]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Lirios]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[aurora]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aurora]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tulipanes]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tulipanes]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Liston]"
+                      cachedDataType="r8"
+                      cachedName="Liston"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liston]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Liston]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="75"
+                      cachedName="Copy of id"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Departamento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="Copy of Departamento"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[departamento]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Departamento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[hortencia]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hortensia]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="75"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rosas]"
+                      dataType="i4"
+                      name="rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[claveles]"
+                      dataType="i4"
+                      name="claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[macetas]"
+                      dataType="i4"
+                      name="macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tierra]"
+                      dataType="i4"
+                      name="tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[girasoles]"
+                      dataType="i4"
+                      name="girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[hortencia]"
+                      dataType="i4"
+                      name="hortencia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[globos]"
+                      dataType="i4"
+                      name="globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tarjetas]"
+                      dataType="i4"
+                      name="tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[orquideas]"
+                      dataType="i4"
+                      name="orquideas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[carmesi]"
+                      dataType="i4"
+                      name="carmesi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lirios]"
+                      dataType="i4"
+                      name="lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[aurora]"
+                      dataType="i4"
+                      name="aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tulipanes]"
+                      dataType="i4"
+                      name="tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liston]"
+                      dataType="i4"
+                      name="liston" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[departamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="departamento" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\SanMiguel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="SanMiguel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">SanMiguel_j20191007$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\SanMiguel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Rosas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Claveles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Macetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tierra]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Girasoles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Hortensia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Globos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Orquideas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Orquideas]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Orquideas]"
+                      name="Orquideas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Carmesi]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Carmesi]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Carmesi]"
+                      name="Carmesi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Lirios]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Aurora]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Liston]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Liston]"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Liston]"
+                      name="Liston"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Rosas]"
+                      dataType="r8"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Claveles]"
+                      dataType="r8"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Macetas]"
+                      dataType="r8"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Tierra]"
+                      dataType="r8"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Girasoles]"
+                      dataType="r8"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Hortensia]"
+                      dataType="r8"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Globos]"
+                      dataType="r8"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Tarjetas]"
+                      dataType="r8"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Orquideas]"
+                      dataType="r8"
+                      name="Orquideas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Carmesi]"
+                      dataType="r8"
+                      name="Carmesi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Lirios]"
+                      dataType="r8"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Aurora]"
+                      dataType="r8"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Tulipanes]"
+                      dataType="r8"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].ExternalColumns[Liston]"
+                      dataType="r8"
+                      name="Liston" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Orquideas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Orquideas]"
+                      name="Orquideas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Carmesi]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Carmesi]"
+                      name="Carmesi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Liston]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[Liston]"
+                      name="Liston" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\SanSalvador"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="SanSalvador"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">SanSalvador_i20191007$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\SanSalvador.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Rosas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Claveles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Macetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tierra]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Girasoles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Hortensia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Globos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Orquideas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Orquideas]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Orquideas]"
+                      name="Orquideas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Carmesi]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Carmesi]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Carmesi]"
+                      name="Carmesi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Lirios]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Aurora]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Liston]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Liston]"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Liston]"
+                      name="Liston"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Rosas]"
+                      dataType="r8"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Claveles]"
+                      dataType="r8"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Macetas]"
+                      dataType="r8"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Tierra]"
+                      dataType="r8"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Girasoles]"
+                      dataType="r8"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Hortensia]"
+                      dataType="r8"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Globos]"
+                      dataType="r8"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Tarjetas]"
+                      dataType="r8"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Orquideas]"
+                      dataType="r8"
+                      name="Orquideas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Carmesi]"
+                      dataType="r8"
+                      name="Carmesi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Lirios]"
+                      dataType="r8"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Aurora]"
+                      dataType="r8"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Tulipanes]"
+                      dataType="r8"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].ExternalColumns[Liston]"
+                      dataType="r8"
+                      name="Liston" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Orquideas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Orquideas]"
+                      name="Orquideas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Carmesi]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Carmesi]"
+                      name="Carmesi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Liston]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[Liston]"
+                      name="Liston" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\SantaAna"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="SantaAna"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">SantaAna_c20191007$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\SantaAna.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Rosas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Claveles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Macetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tierra]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Girasoles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Hortensia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Globos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Orquideas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Orquideas]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Orquideas]"
+                      name="Orquideas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Carmesi]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Carmesi]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Carmesi]"
+                      name="Carmesi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Lirios]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Aurora]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Liston]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Liston]"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Liston]"
+                      name="Liston"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Rosas]"
+                      dataType="r8"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Claveles]"
+                      dataType="r8"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Macetas]"
+                      dataType="r8"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Tierra]"
+                      dataType="r8"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Girasoles]"
+                      dataType="r8"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Hortensia]"
+                      dataType="r8"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Globos]"
+                      dataType="r8"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Tarjetas]"
+                      dataType="r8"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Orquideas]"
+                      dataType="r8"
+                      name="Orquideas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Carmesi]"
+                      dataType="r8"
+                      name="Carmesi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Lirios]"
+                      dataType="r8"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Aurora]"
+                      dataType="r8"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Tulipanes]"
+                      dataType="r8"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].ExternalColumns[Liston]"
+                      dataType="r8"
+                      name="Liston" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Orquideas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Orquideas]"
+                      name="Orquideas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Carmesi]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Carmesi]"
+                      name="Carmesi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Liston]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[Liston]"
+                      name="Liston" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Orquideas]"
+                      cachedDataType="r8"
+                      cachedName="Orquideas"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Orquideas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Orquideas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Carmesi]"
+                      cachedDataType="r8"
+                      cachedName="Carmesi"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Carmesi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Carmesi]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Liston]"
+                      cachedDataType="r8"
+                      cachedName="Liston"
+                      lineageId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output].Columns[Liston]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Liston]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Departamento"
+                      lineageId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Output].Columns[Departamento]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Departamento]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Orquideas]"
+                      cachedDataType="r8"
+                      cachedName="Orquideas"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Orquideas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Orquideas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Carmesi]"
+                      cachedDataType="r8"
+                      cachedName="Carmesi"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Carmesi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Carmesi]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Liston]"
+                      cachedDataType="r8"
+                      cachedName="Liston"
+                      lineageId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output].Columns[Liston]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Liston]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="Departamento"
+                      lineageId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Output].Columns[Departamento]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Departamento]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Orquideas]"
+                      cachedDataType="r8"
+                      cachedName="Orquideas"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Orquideas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Orquideas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Carmesi]"
+                      cachedDataType="r8"
+                      cachedName="Carmesi"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Carmesi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Carmesi]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Liston]"
+                      cachedDataType="r8"
+                      cachedName="Liston"
+                      lineageId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output].Columns[Liston]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Liston]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Departamento"
+                      lineageId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Output].Columns[Departamento]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Departamento]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Orquideas]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Orquideas]"
+                      name="Orquideas" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Carmesi]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Carmesi]"
+                      name="Carmesi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Liston]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Liston]"
+                      name="Liston" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Departamento]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Departamento]"
+                      name="Departamento" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Departamento SM.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Departamento SS.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Departamento SA.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Departamento SM.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\SanMiguel.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output1]"
+              endId="Package\Data Flow Task\Departamento SS.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\SanSalvador.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output2]"
+              endId="Package\Data Flow Task\Departamento SA.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\SantaAna.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="175,34" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Data Flow Task\Departamento SA"
+          TopLeft="551,123" />
+        <NodeLayout
+          Size="137,42"
+          Id="Package\Data Flow Task\SanSalvador"
+          TopLeft="336,40" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="341.181818181818,206.727272727273" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="318,353" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Data Flow Task\Departamento SM"
+          TopLeft="114,114" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Data Flow Task\SanMiguel"
+          TopLeft="129,35" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Data Flow Task\SantaAna"
+          TopLeft="572,35" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="321,280" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Departamento SS"
+          TopLeft="322,114" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="400.340909090909,248.727272727273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.272727272727"
+              Start="0,0"
+              End="0,23.772727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.772727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output2]"
+          TopLeft="633,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
+          TopLeft="403.5,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="194.25,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          TopLeft="632,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-202.068181818182,41.727272727273"
+              Start="0,0"
+              End="-202.068181818182,34.227272727273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.2183288409705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.2183288409705"
+                    Point2="0,27.2183288409705"
+                    Point3="-4,27.2183288409705" />
+                  <mssgle:LineSegment
+                    End="-198.068181818182,27.2183288409705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-198.068181818182,27.2183288409705"
+                    Point2="-202.068181818182,27.2183288409705"
+                    Point3="-202.068181818182,31.2183288409705" />
+                  <mssgle:LineSegment
+                    End="-202.068181818182,34.227272727273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="402.090909090909,156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.727272727273"
+              Start="0,0"
+              End="0,43.227272727273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.227272727273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="196,156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="177.431818181818,50.727272727273"
+              Start="0,0"
+              End="177.431818181818,43.227272727273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.0889487870622" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.0889487870622"
+                    Point2="0,33.0889487870622"
+                    Point3="4,33.0889487870622" />
+                  <mssgle:LineSegment
+                    End="173.431818181818,33.0889487870622" />
+                  <mssgle:CubicBezierSegment
+                    Point1="173.431818181818,33.0889487870622"
+                    Point2="177.431818181818,33.0889487870622"
+                    Point3="177.431818181818,37.0889487870622" />
+                  <mssgle:LineSegment
+                    End="177.431818181818,43.227272727273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="401.25,322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SanSalvador">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SanMiguel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SantaAna">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
