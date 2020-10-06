@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Etl Costa Rica</Id>
+            <Name>Etl Costa Rica</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkD3cEXs+RUWXP7lk9k//awAAAAAeAAAARQB0AGwAIABDAG8AcwB0AGEAIABSAGkAYwBhAAAAEGYAAAABAAAgAAAAL3XVi4m+O037tu2F1i8XQmRqYcnGIFmvpzQj1cQljWoAAAAADoAAAAACAAAgAAAAwy1t12C2e8TFDNg/6fNPqw0woFlxH4aSMt0+yQeWRKwQAAAA7j3+sM0XPVcP42DrBab1KUAAAABr669R/TzSbg7vTGMvvJATrRM2uuVeokabqyCCJb/m8BtUxAM6DFefTuy0vhNtpiacZsCw7Ewdvm7zil9K8wDB</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Etl Costa Rica</Id>
+            <Name>Etl Costa Rica</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkD3cEXs+RUWXP7lk9k//awAAAAAeAAAARQB0AGwAIABDAG8AcwB0AGEAIABSAGkAYwBhAAAAEGYAAAABAAAgAAAA4dnhFwZFZhtyPN1jvDrlkMs8f6BrOCCrTbQ/+2PeoKMAAAAADoAAAAACAAAgAAAAaND99rmaILojzLC96Me/+t+EIT3PJbH2P/6fyiYpURgQAAAAXAzVItQB4iMSPFgSIC2aJ0AAAAD73bkqQcOvHp8iGYjf/6gV0jEPSTNKBBvfxMpyLsuQWeyIH3EjmEMcC6aN+bY1QmjERMDfKYzBKyBvWyJqWrmJ</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>Cubo_Cosata_Rica</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Cubo_Cosata_Rica", "Cubo_Cosata_Rica\Cubo_Cosata_Rica.dwproj", "{DF61E78E-1811-4FFD-9F1F-618A7DFAA1CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF61E78E-1811-4FFD-9F1F-618A7DFAA1CC}.Development|Default.ActiveCfg = Development
+		{DF61E78E-1811-4FFD-9F1F-618A7DFAA1CC}.Development|Default.Build.0 = Development
+		{DF61E78E-1811-4FFD-9F1F-618A7DFAA1CC}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9F595DA-8789-4535-A671-AB4592B6F9EF}
+	EndGlobalSection
+EndGlobal
